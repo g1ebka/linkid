@@ -1,0 +1,54 @@
+# linkid
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<script type="text/javascript">
+		function down()
+		{
+		var a = document.getElementById('dropdown');
+		if ( a.style.display == 'none' )
+		a.style.display = 'block'
+		else
+		if ( a.style.display == 'block' )
+		a.style.display = 'none';
+		};
+	</script>
+
+<div id="header">
+	<div class="wrapper">
+		<div class="droplink">
+			<a href="#">Главная</a><span></span>
+			<a href="#" class="socialbutton" onclick="down()">Игры</a>
+			<ul id="dropdown" style="display:none">
+				<li class="facebook"><a href="rid1.html">Загадки</a></li>
+				<li class="twitter"><a href="rid2.html">Угадайка</a></li>
+				<li class="gplus"><a href="rid3.html">Угадайка мультиплеер</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+    <div id="center">
+		<img src="img/photo.jpg"></img>
+
+		<div id="box_text">
+			<p>
+
+			Добрый день. Меня зовут <b>Глеб Глухов</b>.
+			Я - начинающий программист. Я совсем недавно встал на этот путь,
+		                но уже успел написать свой первый сайт.</p>
+
+		    <p>На этом сайте вы сможете сыграть в три игры, которые я написал.</p>        
+	<br></br>
+        </div>
+    </div>
+</div>
+</body>
+</html>
