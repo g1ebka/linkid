@@ -1,0 +1,44 @@
+# linkid
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>Угадай число</title> 
+<style> 
+body 
+	{ 
+		font-size: 20px; 
+		color:brown; 
+	} 
+	b 
+	{ 
+		color:crimson; 
+	} 
+	strong 
+	{ 
+		color:coral; 
+	} 
+</style> 
+</head>
+<body> 
+<script> 
+	var min=1; 
+	var max=100; 
+	var guessNumber=Math.floor( Math.random() * (max - min + 1)) + min; 
+	document.write("Компьютер загадал число от "+min+" до "+max+".<br> Угадайте его за 7 попыток<br><br>");  
+	var tryCount=0; 
+	var userAnswer; 
+	do 
+	{ 
+		tryCount=tryCount+1; 
+		userAnswer=+prompt(tryCount + " попытка. Ваш вариант:"); 
+		document.write(tryCount + ". " + guessNumber+" "); 
+		if (userAnswer>guessNumber) document.write("<b>Перелет</b><br>"); 
+		if (userAnswer<guessNumber) document.write("<strong>Недолет</strong><br>"); 
+	} 
+	while(userAnswer!=guessNumber && tryCount<7); 
+	if (userAnswer==guessNumber) document.write("Поздравляем!Вы угадали!"); 
+	else document.write("Вы проиграли! Попробуйте еще раз"); 
+</script> 
+</body> 
+</html>
