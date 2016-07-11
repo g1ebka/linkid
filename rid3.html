@@ -1,0 +1,61 @@
+# linkid
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Угадай число</title>
+<style>
+body 
+	{ 
+		font-size: 20px; 
+		color:brown; 
+	} 
+	b 
+	{ 
+		color:crimson; 
+	} 
+	strong 
+	{ 
+		color:coral; 
+	} 
+</style> 
+</head> 
+<body> 
+<script> 
+	var min=1; 
+	var max=100; 
+// Загадываем случайное число 
+	var guessNumber=Math.floor( Math.random() * (max - min + 1)) + min; document.write("Компьютер загадал число от "+min+" до "+max+".<br> Угадайте его за 7 попыток<br><br>"); 
+// Номер попытки 
+	var tryCount1=0;
+	var tryCount2=0;
+	var userAnswer1; 
+	var userAnswer2;
+	do 
+	{ 
+// Увеличиваем количество попыток на единицу 
+			tryCount1=tryCount1+1; 
+			userAnswer1=+prompt(tryCount1 + " попытка, игрок 1. Ваш вариант:"); 
+			document.write(tryCount1 + " попытка игрок 1. " + guessNumber+" "); 
+			if (userAnswer1>guessNumber) 
+		document.write("<b>Перелет</b><br>"); 
+			if (userAnswer1<guessNumber) 
+		document.write("<strong>Недолет</strong><br>"); 
+			if (userAnswer1==guessNumber) 
+		document.write("<br>"); 
+		tryCount2=tryCount2+1; 
+			userAnswer2=+prompt(tryCount2 + " попытка, игрок 2. Ваш вариант:"); 
+			document.write(tryCount2 + " попытка игрок 2. " + guessNumber+" "); 
+			if (userAnswer2>guessNumber) 
+		document.write("<b>Перелет</b><br>"); 
+			if (userAnswer2<guessNumber) 
+		document.write("<strong>Недолет</strong><br>"); 
+	} 
+	while(userAnswer1!=guessNumber && tryCount1<=7 && userAnswer2!=guessNumber && tryCount2<7); 
+	if (userAnswer1==guessNumber && userAnswer2!=guessNumber) document.write("<br>Поздравляем, игрок 1! Вы выиграли!"); 
+	if (userAnswer2==guessNumber && userAnswer1!=guessNumber) document.write("<br>Поздравляем, игрок 2! Вы выиграли!"); 
+	if (userAnswer1==guessNumber && userAnswer2==guessNumber) document.write("<br>Победила дружба!"); 
+	if (userAnswer1!=guessNumber && userAnswer2!=guessNumber) document.write("<br>Оба игрока проиграли! Попробуйте еще раз"); 
+</script> 
+</body> 
+</html>
