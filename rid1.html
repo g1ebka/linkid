@@ -1,0 +1,62 @@
+# linkid
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>Угадай число</title> 
+<style> 
+body 
+	{ 
+		font-size: 20px; 
+		color:brown; 
+	} 
+	b 
+	{ 
+		color:crimson; 
+	} 
+	strong 
+	{ 
+		color:coral; 
+	} 
+</style> 
+</head>
+<body> 
+<script>
+	document.write("Приветствую, пользователь.<br> Я хочу загадать тебе несколько загадок.<br><br>"  + "Отгадай загадку №1:<br>" + "Всё ест — не наедается,<br>" + "А попьёт — умирает?<br>"); // Ответ - огонь 
+	var ans1 = prompt("Ответ на загадку №1: ");
+	var rid1 = ans1.toLowerCase();
+	document.write("<strong>Ваш ответ: </strong>"  + rid1 + "<br><br>");
+	document.write("А теперь загадка №2:<br>" + "Бел, а не сахар,<br>" + "Нет ног, а идет?<br>"); // Ответ - снег 
+	var ans2 = prompt("Ответ на загадку №2: ");
+	var rid2 = ans2.toLowerCase();
+	document.write("<strong>Ваш ответ: </strong>"  + rid2 + "<br><br>");
+	document.write("Едем дальше, загадка №3:<br>" + "Кто самый главный из зверей,<br>"  + "Кто всех важней и всех сильней?<br>"); // Ответ - лев 
+	var ans3 = prompt("Ответ на загадку №3: ");
+	var rid3 = ans3.toLowerCase();
+	document.write("<strong>Ваш ответ: </strong>"  + rid3 + "<br><br>");
+	document.write("Загадка №4:<br>" + "Отгадать легко и быстро:<br>" + "Мягкий, пышный и душистый.<br>" + "Он и черный, и белый,<br>" + "А бывает подгорелый?<br>"); // Ответ - хлеб 
+	var ans4 = prompt("Ответ на загадку №4: ");
+	var rid4 = ans4.toLowerCase();
+	document.write("<strong>Ваш ответ: </strong>"  + rid4 + "<br><br>");
+	var a = 0;
+	var total = 4;
+
+	if ( rid1 == "огонь")
+		{ 
+			a++;
+		}
+	if ( rid2 == "снег")
+		{ 
+			a++;
+		}
+	if ( rid3 == "лев")
+		{ 
+			a++;
+		}
+	if ( rid4 == "хлеб")
+		{ 
+			a++;
+		}
+	
+	document.write("Количество отгаданных загадок: " + a + "<br>Количество неразгаданных загадок: " + (total-a) );	
+</script>
